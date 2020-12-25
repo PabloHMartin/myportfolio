@@ -5,14 +5,32 @@
    [class.navbar__logo--desktop]="!isHandset">
    Pablo H. Martín
 </div>
-<nav *ngIf="!isHandset; else drawer">
-  <ul class="navbar__nav">
+<img *ngIf="isHandset; else desktopnav"
+class="navbar__drawer"
+src="../../../../assets/icons/menu-black.svg" alt="menu"
+(click)="toggleMobileNavOverlay()">
+</div>
+<ng-template #desktopnav>
+  <nav>
+  <ul class="navbar__nav__list">
     <li>About</li>
     <li>Projects</li>
     <li>Blog</li>
   </ul>
 </nav>
-</div>
-<ng-template #drawer>
-  <img class="navbar__drawer" src="../../../../assets/icons/menu-black.svg" alt="menu">
 </ng-template>
+
+<div class="mobile-overlay-nav"
+     [class.mobile-overlay-nav--active]="mobileOverlayNavActive">
+     <div class="mobile-overlay-nav__close"
+     (click)="toggleMobileNavOverlay()">
+     <div class="mobile-overlay-nav__close__button">X</div>
+    </div>
+     <nav class="mobile-overlay-nav__nav">
+        <ul class="mobile-overlay-nav__nav__list">
+          <li>About</li>
+          <li>Projects</li>
+          <li>Blog</li>
+        </ul>
+      </nav>
+</div>

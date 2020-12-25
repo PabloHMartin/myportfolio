@@ -10,10 +10,16 @@ export class NavbarComponent implements OnInit {
 
   @Input() isHandset: boolean;
 
+  mobileOverlayNavActive: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.isHandset);
+    this.mobileOverlayNavActive = false;
+  }
+
+  toggleMobileNavOverlay(): void{
+    this.mobileOverlayNavActive = !this.mobileOverlayNavActive;
   }
 
 }
