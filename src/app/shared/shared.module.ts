@@ -1,8 +1,14 @@
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShellComponent } from './components/shell/shell.component';
+import { RouterModule } from '@angular/router';
 
-const components = [ShellComponent];
+const components = [ShellComponent, NavbarComponent];
+const modules = [
+  CommonModule,
+  RouterModule
+]
 
 
 @NgModule({
@@ -10,7 +16,7 @@ const components = [ShellComponent];
     ...components,
   ],
   imports: [
-    CommonModule
+    ...modules
   ],
   exports: [
     ...components

@@ -1,0 +1,35 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  &--desktop{
+    padding: 1rem 3rem;
+    align-items: baseline;
+  }
+
+  &__nav{
+    display: flex;
+    flex-direction: row;
+    list-style-type:none;
+    color:#999A9C;
+    li{
+      padding: 0 .5rem;
+    }
+  }
+
+  &__logo{
+    &--desktop{
+      font-size: 1.3rem;
+      padding-left: 3rem;
+    }
+    &--mobile{
+      flex-grow: 2;
+    }
+  }
+
+  &__drawer{
+
+  }
+
+}

@@ -1,1 +1,18 @@
-<p>navbar works!</p>
+<div class="navbar"
+   [class.navbar--desktop]="!isHandset">
+<div class="navbar__logo"
+   [class.navbar__logo--mobile]="isHandset"
+   [class.navbar__logo--desktop]="!isHandset">
+   Pablo H. Martín
+</div>
+<nav *ngIf="!isHandset; else drawer">
+  <ul class="navbar__nav">
+    <li>About</li>
+    <li>Projects</li>
+    <li>Blog</li>
+  </ul>
+</nav>
+</div>
+<ng-template #drawer>
+  <img class="navbar__drawer" src="../../../../assets/icons/menu-black.svg" alt="menu">
+</ng-template>
