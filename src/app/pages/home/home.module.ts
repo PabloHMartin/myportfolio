@@ -5,10 +5,14 @@ import { HomeComponent } from './home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeRoutingModule } from './home-routing.module';
 
-const components = [HomeComponent, HeaderComponent];
+const components = [
+  HomeComponent,
+  HeaderComponent
+];
 const modules = [
   CommonModule,
-  SharedModule
+  SharedModule,
+  HomeRoutingModule
 ]
 
 
@@ -18,7 +22,6 @@ const modules = [
    ],
   imports: [
     ...modules,
-    HomeRoutingModule
   ],
     exports: [
     ...components

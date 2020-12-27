@@ -1,0 +1,46 @@
+:host{
+  overflow: hidden;
+}
+.circles{
+  position: relative;
+  top: 5px;
+  right: 8px;
+}
+.slide{
+  display: flex;
+  flex-direction: row;
+  padding-top: .5rem;
+  .content{
+    display: flex;
+    flex-direction: column;
+    min-width: 55%;
+    &__title{
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 900;
+    }
+    &__subtitle{
+      border-left: 1.5px solid grey;
+      padding-left: .5rem;
+      font-size: .7rem;
+      color: grey;
+    }
+    &__button{
+      margin-top: 1rem;
+      background-color: #2A97B4;
+      border: none;
+      color: white;
+      padding: .5rem .2rem;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: .7rem;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+  .illustration{
+    position: relative;
+    right: -15px;
+    top: -40px;
+    overflow:hidden;
+  }
+}

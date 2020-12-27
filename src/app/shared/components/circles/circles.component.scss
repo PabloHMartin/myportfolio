@@ -1,0 +1,17 @@
+:host{
+  width: 100%;
+}
+.rows{
+  display: flex;
+  margin: 0.05rem;
+}
+
+.cols{
+  display: flex;
+  flex-direction: column;
+  margin: 0.05rem;
+}
+
+.circle{
+  border-radius: 50%;
+}

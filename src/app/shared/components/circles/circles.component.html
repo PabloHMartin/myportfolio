@@ -1,0 +1,10 @@
+<div class="rows" *ngFor="let row of rowsArr" >
+  <div class="cols" *ngFor="let col of colsArr">
+   <div class="circle"
+   [style.min-width.px]="circleWidth"
+   [style.min-height.px]="circleHeight"
+   [style.background-color]="backgroundColor"
+   [style.opacity]="opacity"
+   ></div>
+  </div>
+</div>
