@@ -1,6 +1,12 @@
+<div class="illustration-bg"
+  *ngIf="!(isHandset$ | async)">
+  <img src="../../../assets/img/astronautbg.svg" alt="">
+</div>
 <main>
   <section id="header">
-    <app-header></app-header>
+    <app-header
+    [isHandset]="(isHandset$ | async)"
+    ></app-header>
   </section>
 </main>
 

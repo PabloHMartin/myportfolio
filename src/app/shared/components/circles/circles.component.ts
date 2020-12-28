@@ -13,6 +13,7 @@ export class CirclesComponent implements OnInit {
   @Input() circleHeight: number;
   @Input() backgroundColor: string;
   @Input() opacity: number;
+  @Input() margin: number;
 
   colsArr: number[];
   rowsArr: number[];

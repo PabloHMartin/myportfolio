@@ -1,5 +1,9 @@
-<div class="rows" *ngFor="let row of rowsArr" >
-  <div class="cols" *ngFor="let col of colsArr">
+<div class="rows"
+     [ngStyle]="{'margin.rem': margin}"
+     *ngFor="let row of rowsArr" >
+  <div class="cols"
+       [ngStyle]="{'margin.rem': margin}"
+       *ngFor="let col of colsArr">
    <div class="circle"
    [style.min-width.px]="circleWidth"
    [style.min-height.px]="circleHeight"
