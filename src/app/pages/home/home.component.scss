@@ -1,0 +1,18 @@
+.illustration-bg{
+  position: absolute;
+  overflow: hidden;
+  right: 0px;
+  top: 0px;
+  z-index: -998;
+  img{
+  position: relative;
+  height: 1200px;
+  width: 1200px;
+  right: -550px;
+  top: -600px;
+  }
+}
+#header{
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+}

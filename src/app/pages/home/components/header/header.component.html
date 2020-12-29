@@ -1,1 +1,38 @@
-<p>header works!</p>
+<div class="slide"
+ [class.slide--desktop]="!isHandset">
+  <div class="content">
+    <app-circles
+      class="circles"
+      [cols]="3"
+      [rows]="2"
+      [margin]=".05"
+      [circleWidth]="isHandset ? 5 : 10"
+      [circleHeight]="isHandset ? 5 : 10"
+      [backgroundColor]="'grey'"
+      [opacity]=".3">
+    </app-circles>
+    <p class="content__title"
+      [class.content__title--desktop]="!isHandset">Construyamos juntos el futuro digital</p>
+    <h1 class="content__subtitle"
+    [class.content__subtitle--desktop]="!isHandset">Desarrollo web front-end y apps</h1>
+    <button class="content__button"
+    [class.content__button--desktop]="!isHandset">Conoce las respuestas</button>
+  </div>
+  <div
+  class="illustration"
+  [class.illustration--desktop]="!isHandset">
+    <img src="../../../../../assets/img/astro.svg" alt="astronaut">
+  </div>
+  <app-circles
+  *ngIf="!isHandset "
+  class="circles_bg"
+  [cols]="3"
+  [rows]="2"
+  [margin]=".5"
+  [circleWidth]="90"
+  [circleHeight]="90"
+  [backgroundColor]="'#2A97B4'"
+  [opacity]=".05">
+</app-circles>
+
+</div>
