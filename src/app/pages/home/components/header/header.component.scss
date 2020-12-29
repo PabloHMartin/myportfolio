@@ -45,6 +45,7 @@
       font-weight: bold;
       font-size: .7rem;
       font-family: "Montserrat", sans-serif;
+      max-width: 90%;
       &--desktop{
         max-width: 30%;
         font-size: 1rem;
@@ -53,7 +54,7 @@
   }
   .illustration{
     position: relative;
-    right: -15px;
+    right: -8px;
     top: -40px;
     overflow:hidden;
     &--desktop{
