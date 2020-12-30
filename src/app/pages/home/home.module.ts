@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { BrandsComponent } from './components/brands/brands.component';
 
 const components = [
   HomeComponent,
@@ -18,7 +19,8 @@ const modules = [
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
+    BrandsComponent
    ],
   imports: [
     ...modules,

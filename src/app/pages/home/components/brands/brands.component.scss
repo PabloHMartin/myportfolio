@@ -1,0 +1,13 @@
+.brands{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  &__brand{
+    max-width: 50px;
+    object-fit: contain;
+    padding: 0 .5rem;
+    &--desktop{
+      max-width: 100px;
+    }
+  }
+}
