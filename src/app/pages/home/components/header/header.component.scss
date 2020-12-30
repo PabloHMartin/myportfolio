@@ -1,6 +1,3 @@
-:host{
-  overflow: hidden;
-}
 .circles{
   margin-left: -.5rem;
   padding-bottom: .5rem;
@@ -54,8 +51,8 @@
   }
   .illustration{
     position: relative;
-    right: -8px;
     top: -40px;
+    width: 100%;
     overflow:hidden;
     &--desktop{
       top: -150px;

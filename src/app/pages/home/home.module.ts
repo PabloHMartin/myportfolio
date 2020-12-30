@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { BrandsComponent } from './components/brands/brands.component';
+import { AboutComponent } from './components/about/about.component';
 
 const components = [
   HomeComponent,
@@ -20,7 +21,8 @@ const modules = [
 @NgModule({
   declarations: [
     ...components,
-    BrandsComponent
+    BrandsComponent,
+    AboutComponent
    ],
   imports: [
     ...modules,
