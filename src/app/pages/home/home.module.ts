@@ -7,6 +7,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { BrandsComponent } from './components/brands/brands.component';
 import { AboutComponent } from './components/about/about.component';
 import { CtaComponent } from './components/cta/cta.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 const components = [
   HomeComponent,
@@ -24,7 +25,8 @@ const modules = [
     ...components,
     BrandsComponent,
     AboutComponent,
-    CtaComponent
+    CtaComponent,
+    SkillsComponent
    ],
   imports: [
     ...modules,

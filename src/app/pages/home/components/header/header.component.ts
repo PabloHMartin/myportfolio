@@ -8,10 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() isHandset: boolean;
+  titleText: string;
+  headerCirclesColor: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.titleText = "Construyamos juntos el futuro digital";
+    this.headerCirclesColor = "grey";
   }
 
 }

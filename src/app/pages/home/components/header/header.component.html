@@ -1,18 +1,11 @@
 <div class="slide"
  [class.slide--desktop]="!isHandset">
   <div class="content">
-    <app-circles
-      class="circles"
-      [cols]="3"
-      [rows]="2"
-      [margin]=".05"
-      [circleWidth]="isHandset ? 5 : 10"
-      [circleHeight]="isHandset ? 5 : 10"
-      [backgroundColor]="'grey'"
-      [opacity]=".3">
-    </app-circles>
-    <p class="content__title"
-      [class.content__title--desktop]="!isHandset">Construyamos juntos el futuro digital</p>
+    <app-title
+    [isHandset]="isHandset"
+    [text]="titleText"
+    [circlesColor]="headerCirclesColor"
+    ></app-title>
     <h1 class="content__subtitle"
     [class.content__subtitle--desktop]="!isHandset">Desarrollo web front-end y apps</h1>
     <button class="content__button"

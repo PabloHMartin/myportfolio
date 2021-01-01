@@ -1,0 +1,12 @@
+    <app-circles
+      class="circles"
+      [cols]="3"
+      [rows]="2"
+      [margin]=".05"
+      [circleWidth]="isHandset ? 5 : 10"
+      [circleHeight]="isHandset ? 5 : 10"
+      [backgroundColor]="circlesColor"
+      [opacity]=".3">
+    </app-circles>
+    <p class="title"
+      [class.title--desktop]="!isHandset">{{text}}</p>
