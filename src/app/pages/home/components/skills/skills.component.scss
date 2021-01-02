@@ -8,6 +8,9 @@
   max-width: 85%;
   background-color: #16596B;
   color: white;
+  &--desktop{
+    padding: 4rem 4rem;
+  }
 }
 .content{
   display: flex;
@@ -36,7 +39,11 @@
   display: flex;
   padding: 0rem .5rem;
   justify-content: space-between;
-  p{
-    font-size: .8rem;
+  &__col{
+    padding: 0rem .5rem;
+    p{
+      font-size: .8rem;
+      color: lightblue;
+    }
   }
 }
