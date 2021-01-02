@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   &--desktop{
     padding: 1rem 3rem;
     align-items: baseline;
+    width: 50%;
   }
 
   &__nav__list{
@@ -37,10 +38,12 @@
   width: 100vw;
   background-color: white;
   opacity: 0;
-  transition: opacity 230ms ease-in;
+  transition: opacity 230ms ease-in, z-index 100ms ease-in;
+  z-index: -1;
 
     &--active{
-    opacity: 1;
+      opacity: 1;
+      z-index: 999;
     }
     &__close{
       display: flex;
