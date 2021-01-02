@@ -1,7 +1,30 @@
 <div class="background">
     <app-title
     [isHandset]="isHandset"
-    [text]="'Skills & experiece'"
+    [text]="text"
     [circlesColor]="skillsCirclesColor"
     ></app-title>
+  <div class="content"
+    [class.content--desktop]="!isHandset">
+      <div
+          class="about"
+        [class.about--desktop]="!isHandset"
+        >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat nostrum maxime quidem dolores, temporibus non repellendus id, mollitia laboriosam necessitatibus beatae eius distinctio consequatur debitis, quod maiores soluta atque obcaecati.
+      </div>
+
+      <div class="skills"
+      [class.skills--desktop]="!isHandset">
+      <div>
+          <p *ngFor="let skill of techSkills">
+            {{skill}}
+          </p>
+        </div>
+        <div>
+          <p *ngFor="let skill of softSkills">
+            {{skill}}
+          </p>
+        </div>
+      </div>
+  </div>
 </div>

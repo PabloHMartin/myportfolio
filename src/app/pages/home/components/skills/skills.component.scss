@@ -4,8 +4,39 @@
 }
 .background{
   border-radius: 25px 0px 0px 25px;
-  padding: 1.5rem;
-  min-width: 80%;
+  padding: 2rem .5rem 2rem 1.5rem;
+  max-width: 85%;
   background-color: #16596B;
   color: white;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  &--desktop{
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+}
+.about{
+  border-left: 1px solid whitesmoke;
+  margin: 1rem 0rem;
+  padding: .5rem 1rem;
+  color: whitesmoke;
+  &--desktop{
+    font-size: 1.2rem;
+    padding: 2rem 2rem;
+    margin-top: 6rem;
+    margin-left: 5rem;
+    width: 50%;
+  }
+}
+
+.skills{
+  display: flex;
+  padding: 0rem .5rem;
+  justify-content: space-between;
+  p{
+    font-size: .8rem;
+  }
 }
