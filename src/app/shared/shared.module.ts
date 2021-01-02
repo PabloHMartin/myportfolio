@@ -5,6 +5,7 @@ import { ShellComponent } from './components/shell/shell.component';
 import { RouterModule } from '@angular/router';
 import { CirclesComponent } from './components/circles/circles.component';
 import { TitleComponent } from './components/title/title.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const components = [
   ShellComponent,
@@ -21,6 +22,7 @@ const modules = [
 @NgModule({
   declarations: [
     ...components,
+    FooterComponent,
   ],
   imports: [
     ...modules
