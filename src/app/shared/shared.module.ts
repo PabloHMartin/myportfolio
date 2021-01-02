@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { ShellComponent } from './components/shell/shell.component';
 import { RouterModule } from '@angular/router';
 import { CirclesComponent } from './components/circles/circles.component';
+import { TitleComponent } from './components/title/title.component';
 
 const components = [
   ShellComponent,
   NavbarComponent,
-  CirclesComponent
+  CirclesComponent,
+  TitleComponent
 ];
 const modules = [
   CommonModule,

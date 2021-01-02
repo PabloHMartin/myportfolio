@@ -8,5 +8,26 @@
     [isHandset]="(isHandset$ | async)"
     ></app-header>
   </section>
+  <section id="brands">
+    <app-brands
+    [brands]="brands"
+    [isHandset]="(isHandset$ | async)"
+    ></app-brands>
+  </section>
+  <section id="about">
+    <app-about
+    [isHandset]="(isHandset$ | async)">
+  </app-about>
+  </section>
+  <!-- <section id="cta">
+    <app-cta
+    [isHandset]="(isHandset$ | async)">
+    </app-cta>
+  </section> -->
+  <section id="skills">
+    <app-skills
+    [isHandset]="(isHandset$ | async)">
+    </app-skills>
+  </section>
 </main>
 
