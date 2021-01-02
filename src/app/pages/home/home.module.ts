@@ -4,6 +4,10 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { BrandsComponent } from './components/brands/brands.component';
+import { AboutComponent } from './components/about/about.component';
+import { CtaComponent } from './components/cta/cta.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 const components = [
   HomeComponent,
@@ -18,7 +22,11 @@ const modules = [
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
+    BrandsComponent,
+    AboutComponent,
+    CtaComponent,
+    SkillsComponent
    ],
   imports: [
     ...modules,

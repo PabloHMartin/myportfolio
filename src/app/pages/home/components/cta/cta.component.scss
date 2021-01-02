@@ -1,0 +1,31 @@
+.cta{
+  background-image: url('../../../../../assets/img/mobile-cta-bg.svg');
+  background-position: right -10px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0rem;
+  &__title{
+    color: whitesmoke;
+    font-size: 1rem;
+
+    &--desktop{
+      font-size: 1.6-rem;
+    }
+  }
+    &__button{
+      margin-top: 1rem;
+      background-color: #2A97B4;
+      border: none;
+      color: white;
+      padding: .5rem 2rem;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 0.8rem;
+      font-family: "Montserrat", sans-serif;
+
+      &--desktop{
+        font-size: 1rem;
+      }
+    }
+}

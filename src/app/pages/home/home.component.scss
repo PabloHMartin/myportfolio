@@ -3,7 +3,7 @@
   overflow: hidden;
   right: 0px;
   top: 0px;
-  z-index: -998;
+ z-index: -999;
   img{
   position: relative;
   height: 1200px;
@@ -15,4 +15,12 @@
 #header{
   padding-top: 1.5rem;
   padding-left: 1rem;
+}
+#about{
+  padding: 6rem 0rem 6rem 1rem ;
+  overflow: hidden;
+}
+
+#cta{
+  padding-top: 3rem;
 }

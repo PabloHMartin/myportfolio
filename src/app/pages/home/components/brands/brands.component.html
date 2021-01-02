@@ -1,0 +1,8 @@
+<div class="brands">
+  <img *ngFor="let brand of brands"
+  class="brands__brand"
+  src='{{brand.imgUrl}}'
+  alt='{{brand.alt}}'
+  [class.brands__brand--desktop]="!isHandset">
+</div>
+
