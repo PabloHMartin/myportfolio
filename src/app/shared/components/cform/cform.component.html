@@ -1,0 +1,61 @@
+<div class="background"
+[class.background--desktop]="!isHandset">
+    <app-title
+    [isHandset]="isHandset"
+    [text]="text"
+    [circlesColor]="cfromCirclesColor"
+    ></app-title>
+
+    <div class="info">
+      <p>Email me:</p>
+      <p>pablohmartindev@gmail.com</p>
+    </div>
+
+  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form__senderId">
+      <label class="form__formInput"
+      for="name">
+        <div class=" form__label">Name</div>
+        <input
+        class="form__input"
+        formControlName="name"
+        type="text"
+        autocomplete="false"
+        placeholder="your name">
+      </label>
+      <label class="form__formInput"
+      for="email">
+        <div class=" form__label">Email</div>
+        <input
+        formControlName="email"
+        class="form__input"
+        type="email"
+        autocomplete="false"
+        placeholder="your email">
+      </label>
+    </div>
+    <div class="form__sendermessage">
+      <label class="form__formInput"
+      for="message">
+        <div class=" form__label">Message</div>
+        <textarea
+        class="form__textarea form__input"
+        formControlName="message"
+        type="text"
+        autocomplete="false"
+        placeholder="your message">
+        </textarea>
+      </label>
+    </div>
+
+    <div class="form__button">
+      <button
+      class="form__button__button"
+      type="submit"
+      [disabled]="form.invalid || loading">
+      Send
+      </button>
+    </div>
+  </form>
+
+</div>
