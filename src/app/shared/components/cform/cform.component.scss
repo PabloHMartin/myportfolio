@@ -29,7 +29,15 @@
     border: none;
     background-color: #1F7187;
     padding: .5rem;
+    &--invalid{
+     color: indianred;
+    }
     &:focus{
+      outline: none;
+      color:white;
+      font-family: 'Montserrat', sans-serif;
+    }
+    &:not(:focus){
       outline: none;
       color:white;
       font-family: 'Montserrat', sans-serif;
@@ -78,6 +86,9 @@
       font-weight: bold;
       border: 0px;
       border-radius: 25px 0px 0px 25px;
+      &:disabled{
+        color: grey;
+      }
     }
   }
 
