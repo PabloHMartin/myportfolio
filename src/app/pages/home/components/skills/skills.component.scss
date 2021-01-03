@@ -15,6 +15,9 @@
 .content{
   display: flex;
   flex-direction: column;
+  a{
+    color: white;
+  }
   &--desktop{
     flex-direction: row;
     align-items: flex-end;

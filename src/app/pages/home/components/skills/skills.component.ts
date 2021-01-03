@@ -18,7 +18,7 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit(): void {
     this.skillsCirclesColor = "white";
-    this.text = "Skills"
+    this.text = "Skills and experience"
     this.softSkills= ['JIRA/Confluence', 'Scrum experience', 'adobe xd', 'Git'];
     this.techSkills = [ 'Typescript', 'ES6', 'Modern Javascript', 'Angular+2', 'Vue', 'RxJs', 'Unit Testing'];
   }
