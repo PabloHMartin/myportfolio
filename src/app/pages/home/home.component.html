@@ -14,17 +14,20 @@
     [isHandset]="(isHandset$ | async)"
     ></app-brands>
   </section>
-  <section id="about">
+  <section id="about"
+  [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-about
     [isHandset]="(isHandset$ | async)">
   </app-about>
   </section>
-  <!-- <section id="cta">
+  <section id="cta"
+  [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-cta
     [isHandset]="(isHandset$ | async)">
     </app-cta>
-  </section> -->
-  <section id="skills">
+  </section>
+  <section id="skills"
+  [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-skills
     [isHandset]="(isHandset$ | async)">
     </app-skills>
