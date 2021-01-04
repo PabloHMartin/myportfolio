@@ -43,7 +43,9 @@
     <div class="form__sendermessage">
       <label class="form__formInput"
       for="message">
-        <div class=" form__label"[class.form__input--invalid]="(form.get('message').touched || form.get('message').dirty) && form.get('message').invalid">
+        <div
+        class=" form__label"
+        [class.form__input--invalid]="(form.get('message').touched || form.get('message').dirty) && form.get('message').invalid">
           Message
         </div>
         <textarea
@@ -60,8 +62,15 @@
       <button
       class="form__button__button"
       type="submit"
+      [class.form__button__button--success]="cformState === 1"
+      [class.form__button__button--error]="cformState === 2"
       [disabled]="form.invalid || loading">
-      Send
+      <div *ngIf="!loading" class="send">Send</div>
+      <div *ngIf="loading"  class="loading">
+          <div class="loadingio-spinner-dual-ball-8wy96cxe1ir"><div class="ldio-74n3l36brr9">
+          <div></div><div></div><div></div>
+          </div></div>
+      </div>
       </button>
     </div>
   </form>

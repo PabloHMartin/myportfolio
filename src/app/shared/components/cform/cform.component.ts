@@ -1,3 +1,4 @@
+import { CformState } from './cform.state.enum';
 import { Message } from './../../models/message.model';
 import { DbService } from './../../services/db.service';
 import { Component, Input, OnInit } from '@angular/core';
@@ -16,12 +17,16 @@ export class CformComponent implements OnInit {
   serverMessage: string;
   text: string;
   cfromCirclesColor: string;
+  cformState: number;
+
 
   constructor(private fb: FormBuilder, private db: DbService) { }
 
   ngOnInit(): void {
     this.cfromCirclesColor = "white";
     this.text = "Let's talk"
+
+    this.cformState = CformState.iddle;
 
     this.form = this.fb.group({
       name: ['', [Validators.required]],
@@ -55,11 +60,18 @@ export class CformComponent implements OnInit {
     try {
       await this.db.saveMessage(messageToSave)
       .then( res => {
-        console.log(res);
+        this.form.reset();
+        this.cformState = CformState.success;
+        setTimeout(() => {
+          this.cformState = CformState.iddle;
+        }, 3000);
       });
 
     } catch (error) {
-
+        this.cformState = CformState.error;
+        setTimeout(() => {
+          this.cformState = CformState.iddle;
+        }, 3000);
     }
 
     this.loading = false;
