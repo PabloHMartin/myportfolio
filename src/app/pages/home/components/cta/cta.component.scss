@@ -11,6 +11,7 @@
   }
   &__title{
     color: whitesmoke;
+    font-weight: bold;
     font-size: 1rem;
 
     &--desktop{
@@ -27,7 +28,9 @@
       font-weight: bold;
       font-size: 0.8rem;
       font-family: "Montserrat", sans-serif;
-
+      -webkit-box-shadow: -5px 10px 18px -12px rgba(0,0,0,1);
+      -moz-box-shadow: -5px 10px 18px -12px rgba(0,0,0,1);
+      box-shadow: -5px 10px 18px -12px rgba(0,0,0,1);
       &--desktop{
         font-size: 1.2rem;
         padding: 1.5rem 2.5rem;
