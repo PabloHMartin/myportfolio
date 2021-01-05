@@ -32,13 +32,15 @@
     [isHandset]="(isHandset$ | async)">
     </app-skills>
   </section>
-  <section id="projects">
+  <section id="projects"
+  [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-projects
     [isHandset]="(isHandset$ | async)">
     </app-projects>
   </section>
-  <section id="cform">
-    <app-cform
+  <section id="cform"
+  [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
+  <app-cform
     [isHandset]="(isHandset$ | async)"></app-cform>
   </section>
 </main>
