@@ -1,0 +1,27 @@
+<div class="title">
+  <app-title
+  [isHandset]="isHandset"
+  [text]="text"
+  [circlesColor]="cfromCirclesColor"
+  ></app-title>
+</div>
+
+ <swiper
+ class="swiper"
+ [slidesPerView]="1"
+ [spaceBetween]="2"
+ [loop]="true"
+ [pagination]="{ clickable: true}"
+ [centeredSlides]="true"
+ (swiper)="onSwiper($event)"
+ (slideChange)="onSlideChange()">
+      <ng-template swiperSlide>
+        <app-card></app-card>
+      </ng-template>
+      <ng-template swiperSlide>
+        <app-card></app-card>
+      </ng-template>
+      <ng-template swiperSlide>
+        <app-card></app-card>
+      </ng-template>
+</swiper>
