@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AppRoutingModule,
     SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
