@@ -1,7 +1,13 @@
-
 .title{
   margin-left: 1rem;
+  &--desktop{
+    margin-top: 5rem;
+    margin-left: 5rem;
+  }
 }
 .swiper{
   margin-top: 1rem;
+  &--desktop{
+    margin-left: 2rem 5rem;
+  }
 }

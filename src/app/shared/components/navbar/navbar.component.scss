@@ -40,18 +40,20 @@
   opacity: 0;
   transition: opacity 230ms ease-in, z-index 100ms ease-in;
   z-index: -1;
-
+    &__overlay-top-bar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    &__title{
+      padding: 1.5rem 0rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
     &--active{
       opacity: 1;
       z-index: 999;
-    }
-    &__close{
-      display: flex;
-      justify-content: flex-end;
-      &__button{
-        padding: 1rem 2rem;
-        font-size: 1.5rem;
-      }
     }
     &__nav{
       justify-content: center;
@@ -62,12 +64,29 @@
         list-style-type:none;
         color:#999A9C;
         padding: 2rem 0rem;
+        text-align: center;
         li{
           font-size: 1.5rem;
-          padding: 0.3rem;
+          padding: .5rem;
+          font-weight: 600;
         }
       }
   }
 
-
+  &__social{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__img{
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+.close-button{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
 }

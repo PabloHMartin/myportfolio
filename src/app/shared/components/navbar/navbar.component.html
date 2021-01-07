@@ -20,9 +20,10 @@ src="../../../../assets/icons/menu-black.svg" alt="menu"
 
 <div class="mobile-overlay-nav"
      [class.mobile-overlay-nav--active]="mobileOverlayNavActive">
-     <div class="mobile-overlay-nav__close"
-     (click)="toggleMobileNavOverlay()">
-     <div class="mobile-overlay-nav__close__button">X</div>
+     <div class="mobile-overlay-nav__overlay-top-bar">
+        <div class="mobile-overlay-nav__title">
+          Pablo H. Martín
+        </div>
     </div>
      <nav class="mobile-overlay-nav__nav">
         <ul class="mobile-overlay-nav__nav__list">
@@ -31,4 +32,16 @@ src="../../../../assets/icons/menu-black.svg" alt="menu"
           <li>Blog</li>
         </ul>
       </nav>
+    <div class="mobile-overlay-nav__social">
+      <img class="mobile-overlay-nav__social__img"
+      src="../../../../assets/icons/github-black.svg"
+      alt="">
+      <img class="mobile-overlay-nav__social__img"
+      src="../../../../assets/icons/linkedin-black.svg"
+      alt="">
+    </div>
+
+      <div class="close-button" (click)="toggleMobileNavOverlay()">
+        X
+      </div>
 </div>
