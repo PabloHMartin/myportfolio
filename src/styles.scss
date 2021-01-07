@@ -9,3 +9,11 @@ body{
 a{
   text-decoration: none;
 }
+
+/*active pagination*/
+.swiper-pagination .swiper-pagination-bullet-active {
+  border-radius: 0;
+  color: #1F7187;
+  background-color:#1F7187;
+  opacity: 1;
+}
