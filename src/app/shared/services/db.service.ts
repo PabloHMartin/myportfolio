@@ -1,11 +1,16 @@
+import { Project } from './../models/project.model';
 import { Message } from '../models/message.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DbService {
+
+  projects$ = this.db.collection<Project[]>('projects')
+  .valueChanges({idField: 'id'});
 
   constructor(private db: AngularFirestore) { }
 
@@ -18,5 +23,6 @@ export class DbService {
       date: new Date().toLocaleDateString("es-ES").toString()
     });
   }
+
 
 }

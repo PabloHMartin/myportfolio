@@ -1,3 +1,4 @@
+import { DbService } from './../../../../shared/services/db.service';
 import { Component, Input, OnInit } from '@angular/core';
 import SwiperCore, { Pagination } from 'swiper/core';
 // install Swiper components
@@ -14,7 +15,7 @@ export class ProjectsComponent implements OnInit {
   text: string;
   cfromCirclesColor: string;
 
-  constructor() { }
+  constructor(public db: DbService) { }
 
   ngOnInit(): void {
     this.text = "Projects";
