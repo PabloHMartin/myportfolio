@@ -16,14 +16,12 @@
  [pagination]="{ clickable: true}"
  [centeredSlides]="true"
  (swiper)="onSwiper($event)"
- (slideChange)="onSlideChange()">
-      <ng-template swiperSlide>
-        <app-card></app-card>
+ (slideChange)="onSlideChange()"
+ *ngIf="db.projects$ | async as projects">
+    <div *ngFor="let project of projects">
+      <ng-template swiperSlide >
+        <app-card
+        [project]="project"></app-card>
       </ng-template>
-      <ng-template swiperSlide>
-        <app-card></app-card>
-      </ng-template>
-      <ng-template swiperSlide>
-        <app-card></app-card>
-      </ng-template>
+    </div>
 </swiper>
