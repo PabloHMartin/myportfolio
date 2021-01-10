@@ -19,7 +19,8 @@ const components = [
   AboutComponent,
   CtaComponent,
   SkillsComponent,
-  ProjectsComponent
+  ProjectsComponent,
+  CardComponent
 ];
 const modules = [
   CommonModule,
@@ -32,7 +33,6 @@ const modules = [
 @NgModule({
   declarations: [
     ...components,
-    CardComponent
    ],
   imports: [
     ...modules,
