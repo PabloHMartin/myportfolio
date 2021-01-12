@@ -3,7 +3,9 @@ import { Project } from './../models/project.model';
 import { Message } from '../models/message.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
-import { merge, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
+import { Details } from '../models/details.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +32,7 @@ export class DbService {
    * Gets collection and subcollection of a project by id
    * @param: id
    */
-  getProjectById(id: string): Observable<any>{
+  getProjectById(id: string): Observable<Project>{
 
     const projectSummary$ = this.db.collection<Project>(DbDocs.firestoreProjectCol)
     .doc(id).valueChanges();
@@ -39,7 +41,20 @@ export class DbService {
     .doc(id).collection(DbDocs.firestoreProjectDetailsSubcol)
     .doc(DbDocs.firestoreProjectDetailsData).valueChanges();
 
-    return merge(projectSummary$,projectDetails$);
+    return projectDetails$
+      .pipe(
+        mergeMap( (details: Details ) => {
+          return projectSummary$
+                    .pipe(
+                      map((project: Project) => {
+                          project.details = details;
+                          return project;
+                        }
+                      )
+                    )
+        })
+      );
+
   }
 
 }
