@@ -7,7 +7,11 @@ import { CirclesComponent } from './components/circles/circles.component';
 import { TitleComponent } from './components/title/title.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CformComponent } from './components/cform/cform.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { AboutComponent } from './components/about/about.component';
+import { CardComponent } from './components/projects/components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SwiperModule } from 'swiper/angular';
 
 const components = [
   ShellComponent,
@@ -15,12 +19,16 @@ const components = [
   CirclesComponent,
   TitleComponent,
   FooterComponent,
-  CformComponent
+  CformComponent,
+  ProjectsComponent,
+  CardComponent,
+  AboutComponent
 ];
 const modules = [
   CommonModule,
   RouterModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  SwiperModule
 ]
 
 

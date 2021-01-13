@@ -1,4 +1,4 @@
-import { DbService } from './../../../../shared/services/db.service';
+import { DbService } from '../../services/db.service';
 import { Component, Input, OnInit } from '@angular/core';
 import SwiperCore, { Pagination } from 'swiper/core';
 // install Swiper components

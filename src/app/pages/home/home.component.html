@@ -17,7 +17,8 @@
   <section id="about"
   [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-about
-    [isHandset]="(isHandset$ | async)">
+    [isHandset]="(isHandset$ | async)"
+    [aboutText]="aboutText">
   </app-about>
   </section>
   <section id="cta"

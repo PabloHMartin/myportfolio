@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   @Input() isHandset: boolean;
+  @Input() aboutText: string;
 
   constructor() { }
 

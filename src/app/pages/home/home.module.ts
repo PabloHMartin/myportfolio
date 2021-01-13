@@ -5,28 +5,20 @@ import { HomeComponent } from './home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { BrandsComponent } from './components/brands/brands.component';
-import { AboutComponent } from './components/about/about.component';
 import { CtaComponent } from './components/cta/cta.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { SwiperModule } from 'swiper/angular';
-import { CardComponent } from './components/projects/components/card/card.component';
 
 const components = [
   HomeComponent,
   HeaderComponent,
   BrandsComponent,
-  AboutComponent,
   CtaComponent,
-  SkillsComponent,
-  ProjectsComponent,
-  CardComponent
+  SkillsComponent
 ];
 const modules = [
   CommonModule,
   SharedModule,
-  HomeRoutingModule,
-  SwiperModule
+  HomeRoutingModule
 ]
 
 

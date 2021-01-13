@@ -2,8 +2,9 @@ import { Project } from './../../shared/models/project.model';
 import { DbService } from './../../shared/services/db.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-project',
@@ -12,17 +13,23 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class ProjectComponent implements OnInit, OnDestroy  {
 
-  destroy$: Subject<boolean> = new Subject<boolean>();
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches)
+  );
 
+  destroy$: Subject<boolean> = new Subject<boolean>();
+  headerCirclesColor: string;
   projectId: string;
   project: Project;
 
   constructor(private db: DbService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private breakpointObserver: BreakpointObserver) { }
 
 
   ngOnInit(): void {
-
+    this.headerCirclesColor = "grey";
     this.projectId = this.route.snapshot.params['id'];
     this.getProjectById();
   }

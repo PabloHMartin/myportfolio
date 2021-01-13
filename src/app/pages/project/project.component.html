@@ -1,3 +1,17 @@
-<div>
-{{project.details | json}}
+<div *ngIf="project">
+  <app-title
+  [isHandset]="isHandset$ | async"
+  [text]="project.title"
+  [circlesColor]="headerCirclesColor">
+  </app-title>
+  <app-about
+  [isHandset]="(isHandset$ | async)"
+  [aboutText]="project.details.problem">
+  </app-about>
+  <app-projects
+  [isHandset]="isHandset$ | async">
+  </app-projects>
+  <app-cform
+  [isHandset]="isHandset$ | async">
+  </app-cform>
 </div>

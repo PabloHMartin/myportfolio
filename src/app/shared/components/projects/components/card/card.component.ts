@@ -1,4 +1,4 @@
-import { Project } from './../../../../../../shared/models/project.model';
+import { Project } from '../../../../models/project.model';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
