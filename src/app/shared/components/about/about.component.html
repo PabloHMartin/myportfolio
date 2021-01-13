@@ -1,8 +1,7 @@
 <p
 class="about"
 [class.about--desktop]="!isHandset"
->
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat nostrum maxime quidem dolores, temporibus non repellendus id, mollitia laboriosam necessitatibus beatae eius distinctio consequatur debitis, quod maiores soluta atque obcaecati.
+ innerHtml="{{aboutText}}">
 </p>
 
 <app-circles
@@ -10,7 +9,7 @@ class="about"
   class="circles_bg"
   [cols]="3"
   [rows]="2"
-  [margin]=".5"
+  [margin]=".4"
   [circleWidth]="isHandset ? 60 : 150"
   [circleHeight]="isHandset ? 60 : 150"
   [backgroundColor]="'#2A97B4'"

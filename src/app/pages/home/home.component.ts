@@ -11,11 +11,12 @@ import { Brand } from './models/brands.models';
 })
 export class HomeComponent implements OnInit {
 
-      isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
     );
 
+    aboutText: string;
     brands: Brand[];
 
   constructor(private breakpointObserver: BreakpointObserver) { }
@@ -42,6 +43,7 @@ export class HomeComponent implements OnInit {
         alt: 'vodafone'
       }
     ]
+    this.aboutText = "Loremipsum tocho Lorem ipsum tocho \n pero mucho Lorem \n ipsum tocho Lorem ipsum tocho Lorem ipsum, \n tocho Lorem ipsum tocho , \n tocho Lorem ipsum tocho , \n tocho Lorem ipsum tocho";
   }
 
 }
