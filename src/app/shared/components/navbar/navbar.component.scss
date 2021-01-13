@@ -20,6 +20,11 @@
   }
 
   &__logo{
+    & a:active
+    ,& a:visited{
+      outline: none;
+      color: darkslategray;
+    }
     &--desktop{
       font-size: 1.3rem;
       padding-left: 3rem;
