@@ -8,6 +8,9 @@
   [isHandset]="(isHandset$ | async)"
   [aboutText]="project.details.problem">
   </app-about>
+  <app-skills
+  [isHandset]="isHandset$ | async">
+  </app-skills>
   <app-projects
   [isHandset]="isHandset$ | async">
   </app-projects>
