@@ -6,14 +6,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { BrandsComponent } from './components/brands/brands.component';
 import { CtaComponent } from './components/cta/cta.component';
-import { SkillsComponent } from './components/skills/skills.component';
 
 const components = [
   HomeComponent,
   HeaderComponent,
   BrandsComponent,
-  CtaComponent,
-  SkillsComponent
+  CtaComponent
 ];
 const modules = [
   CommonModule,

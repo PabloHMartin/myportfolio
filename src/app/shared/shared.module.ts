@@ -1,3 +1,4 @@
+import { SkillsComponent } from './components/skills/skills.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -22,7 +23,8 @@ const components = [
   CformComponent,
   ProjectsComponent,
   CardComponent,
-  AboutComponent
+  AboutComponent,
+  SkillsComponent
 ];
 const modules = [
   CommonModule,
