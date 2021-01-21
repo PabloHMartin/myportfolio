@@ -1,20 +1,30 @@
 <div *ngIf="project">
-  <app-title
-  [isHandset]="isHandset$ | async"
-  [text]="project.title"
-  [circlesColor]="headerCirclesColor">
-  </app-title>
-  <app-about
-  [isHandset]="(isHandset$ | async)"
-  [aboutText]="project.details.problem">
-  </app-about>
-  <app-skills
-  [isHandset]="isHandset$ | async">
-  </app-skills>
-  <app-projects
-  [isHandset]="isHandset$ | async">
-  </app-projects>
-  <app-cform
-  [isHandset]="isHandset$ | async">
-  </app-cform>
+  <section id="title">
+    <app-title
+    [isHandset]="isHandset$ | async"
+    [text]="project.title"
+    [circlesColor]="headerCirclesColor">
+    </app-title>
+  </section>
+  <section id="about">
+    <app-about
+    [isHandset]="(isHandset$ | async)"
+    [aboutText]="project.details.problem">
+    </app-about>
+  </section>
+  <section id="skills">
+    <app-skills
+    [isHandset]="isHandset$ | async">
+    </app-skills>
+  </section>
+  <section id="projects">
+    <app-projects
+    [isHandset]="isHandset$ | async">
+    </app-projects>
+  </section>
+  <section id="cform">
+    <app-cform
+    [isHandset]="isHandset$ | async">
+    </app-cform>
+  </section>
 </div>
