@@ -1,5 +1,5 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Brand } from './models/brands.models';
@@ -10,6 +10,9 @@ import { Brand } from './models/brands.models';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  @ViewChild("cform", { static: false }) cform;
+  @ViewChild("projects", { static: false }) projects;
 
    isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -43,7 +46,14 @@ export class HomeComponent implements OnInit {
         alt: 'vodafone'
       }
     ]
-    this.aboutText = "Loremipsum tocho Lorem ipsum tocho \n pero mucho Lorem \n ipsum tocho Lorem ipsum tocho Lorem ipsum, \n tocho Lorem ipsum tocho , \n tocho Lorem ipsum tocho , \n tocho Lorem ipsum tocho";
+    this.aboutText = `I've always wanted to work by doing something I like. With Software development I have succeeded.
+    <br /><br /> I like to create products that I believe in and share the workspace with people who want to improve themselves every day.
+    <br /><br /> As a developer, I like to dive into the technologies I use and ,at the same time, try to learn new techniques and framkeworks. I think teamwork is necessary, so the quality of the software must be the best. Words like SOLID, UnitTests or Clean Code are not unknown to me.`;
   }
+
+  scroll(el: string) {
+    this[el].nativeElement.scrollIntoView({ behavior: "smooth" });
+  }
+
 
 }

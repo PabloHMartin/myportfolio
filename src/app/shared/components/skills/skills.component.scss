@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   &--desktop{
-    justify-content: center;
+    width: 80%;
   }
 }
 .background{
@@ -19,8 +19,9 @@
 .content{
   display: flex;
   flex-direction: column;
-  a{
-    color: white;
+  &__link{
+        color: white;
+    text-decoration: none;
   }
   &--desktop{
     flex-direction: row;
