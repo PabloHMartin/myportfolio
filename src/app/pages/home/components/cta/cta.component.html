@@ -3,12 +3,13 @@
   <div>
     <p class="cta__title"
     [class.cta__title--desktop]="!isHandset">
-      Lorem ipsum dolor sit amet consectetur
+      {{ctaText}}
     </p>
   </div>
   <div>
     <button
      class="cta__button"
+     (click)="scrollTo('cform')"
      [class.cta__button--desktop]="!isHandset">
      Let's talk
     </button>

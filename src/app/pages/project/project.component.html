@@ -1,12 +1,17 @@
 <div *ngIf="project">
-  <section id="title">
+  <section
+  class="title"
+  id="title"
+  [ngClass]="{'title--desktop': !(isHandset$ | async)}">
     <app-title
     [isHandset]="isHandset$ | async"
     [text]="project.title"
     [circlesColor]="headerCirclesColor">
     </app-title>
   </section>
-  <section id="about">
+  <section
+  class="about"
+  [ngClass]="{'about--desktop': !(isHandset$ | async)}">
     <app-about
     [isHandset]="(isHandset$ | async)"
     [aboutText]="project.details.problem">

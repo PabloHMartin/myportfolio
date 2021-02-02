@@ -12,26 +12,28 @@
   top: -600px;
   }
 }
-#header{
+.header{
   padding-top: 1.5rem;
   padding-left: 1rem;
 }
-#about{
+.about{
   margin-top: 3rem;
-  padding: 0rem 0rem 6rem 1rem ;
+  padding: 0rem 0rem 7rem 1rem ;
   overflow: hidden;
 }
-#cta{
 
-}
-#projects{
+.projects{
    margin-top: 4rem;
 }
-#skills{
+.skills{
   margin-top: 4rem;
+  &--desktop{
+    display: flex;
+    justify-content: center;
+  }
 }
 
-#cform{
+.cform{
   margin-top: 4rem;
 }
 .section-margin--desktop{

@@ -1,8 +1,16 @@
-#title{
+.title{
   padding: 1rem;
+  &--desktop{
+    padding-top: 3rem;
+    padding-left: 3rem;
+  }
 }
-#about{
-   padding: 0rem 0rem 6rem 1rem ;
+.about{
+   padding: 2rem 0rem 6rem 1rem ;
+   overflow-x: hidden;
+  &--desktop{
+   padding: 2rem 0rem 7rem 1rem ;
+  }
 }
 #skills{
   margin-top: 4rem;

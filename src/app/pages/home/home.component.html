@@ -3,43 +3,49 @@
   <img src="../../../assets/img/astronautbg.svg" alt="">
 </div>
 <main>
-  <section id="header">
+  <section class="header"
+  [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-header
+    (scroll)="scroll($event)"
     [isHandset]="(isHandset$ | async)"
     ></app-header>
   </section>
-  <section id="brands">
+  <section class="brands">
     <app-brands
     [brands]="brands"
     [isHandset]="(isHandset$ | async)"
     ></app-brands>
   </section>
-  <section id="about"
+  <section class="about"
   [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-about
     [isHandset]="(isHandset$ | async)"
     [aboutText]="aboutText">
   </app-about>
   </section>
-  <section id="cta"
+  <section class="cta"
   [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-cta
+    (scroll)="scroll($event)"
     [isHandset]="(isHandset$ | async)">
     </app-cta>
   </section>
-  <section id="skills"
-  [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
+  <section class="skills"
+  [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}"
+  [ngClass]="{'skills--desktop': !(isHandset$ | async)}">
     <app-skills
     [isHandset]="(isHandset$ | async)">
     </app-skills>
   </section>
-  <section id="projects"
+  <section #projects
+  class="projects"
   [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
     <app-projects
     [isHandset]="(isHandset$ | async)">
     </app-projects>
   </section>
-  <section id="cform"
+  <section #cform
+  class="cform"
   [ngClass]="{'section-margin--desktop': !(isHandset$ | async)}">
   <app-cform
     [isHandset]="(isHandset$ | async)"></app-cform>

@@ -7,9 +7,10 @@
     [circlesColor]="headerCirclesColor"
     ></app-title>
     <h1 class="content__subtitle"
-    [class.content__subtitle--desktop]="!isHandset">Desarrollo web front-end y apps</h1>
+    [class.content__subtitle--desktop]="!isHandset">{{subtitle}}</h1>
     <button class="content__button"
-    [class.content__button--desktop]="!isHandset">Conoce las respuestas</button>
+    (click)="scrollTo('cform')"
+    [class.content__button--desktop]="!isHandset">{{buttonText}}</button>
   </div>
   <div
   class="illustration"
